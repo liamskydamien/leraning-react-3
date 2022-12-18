@@ -4,15 +4,13 @@ import Button from "./UI/Button";
 const addUserForm = (props) => {
     return <form>
         <div className={styles.newUser__controls}>
-            <div className={styles.newUser__control}>
-                <label htmlFor="username">Username</label>
-                <input id="username" type="text"/>
+            <div>
+                <label className={styles.newUser__control__label} htmlFor="username">Username</label>
+                <input className={styles.newUser__control__input} id="username" type="text"/>
             </div>
-        </div>
-        <div className={styles.newUser__controls}>
-            <div className={styles.newUser__control}>
-                <label htmlFor="age">Age (Years)</label>
-                <input id="age" type="number"/>
+            <div>
+                <label className={styles.newUser__control__label} htmlFor="age">Age (Years)</label>
+                <input className={styles.newUser__control__input} id="age" type="number"/>
             </div>
         </div>
         <div className={styles.newUser__actions}>

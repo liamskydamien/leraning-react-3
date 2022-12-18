@@ -1,29 +1,41 @@
-.new-user__controls {
+.newUser__controls {
+    text-align: center;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
-    text-align: left;
 }
 
-.new-user__control label{
+.newUser__control__label{
     font-weight: bold;
     margin-bottom: 0.5rem;
-    display: block;
+    display: flex;
 }
 
-.new-user__control input {
+.newUser__control__input {
     font: inherit;
     padding: 0.5rem;
     border-radius: 15px;
     border: 1px solid #ccc;
-    width: 20rem;
+    width: 10.375rem;
     max-width: 100%;
 }
 
-.new-user__actions {
+.newUser__actions {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+@media (min-width: 768px) {
+    .newUser__control__input {
+        width: 18.375rem;
+    }
+    .newUser__control__label {
+        margin-bottom: 1rem;
+    }
+}
+
+
