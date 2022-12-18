@@ -2,13 +2,64 @@
     background-color: #000;
     color: #fff;
     border: 0;
-    padding: 10px 20px;
-    border-radius: 5px;
+    width: 10rem;
+    margin: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 15px;
     cursor: pointer;
+    font: inherit;
+    font-weight: bold;
 }
 
 .button:hover {
     background-color: #ccc;
+}
+
+.button:active {
+    background-color: #000;
+    color: #fff;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button.submit {
+    background-color: #23ff65;
+    color: #292929;
+}
+
+.button.submit:hover {
+    background-color: #1b9e4f;
+    color: #fff;
+}
+
+.button.submit:active {
+    background-color: #23ff65;
+    color: #292929;
+}
+
+.button.submit:focus {
+    outline: none;
+}
+
+.button.cancel {
+    background-color: #ff2323;
+    color: #292929;
+}
+
+.button.cancel:hover {
+    background-color: #9e1b1b;
+    color: #fff;
+}
+
+.button.cancel:active {
+    background-color: #ff2323;
+    color: #292929;
+}
+
+.button.cancel:focus {
+    outline: none;
 }
 
 /* Path: src\components\UI\Card.module.css */

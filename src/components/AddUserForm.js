@@ -16,8 +16,8 @@ const addUserForm = (props) => {
             </div>
         </div>
         <div className={styles.newUser__actions}>
-            <Button color="green">Add User</Button>
-            <Button color="red">Cancel</Button>
+            <Button class="submit">Add User</Button>
+            <Button class="cancel">Cancel</Button>
         </div>
     </form>
 }

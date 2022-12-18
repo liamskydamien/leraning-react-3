@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './Button.module.css';
 const Button = props => {
-    return <button className={styles.button}></button>
+    const buttonClass = styles.button + ' ' + styles[props.class];
+    return <button className={buttonClass}>{props.children}</button>
 }
 export default Button;
