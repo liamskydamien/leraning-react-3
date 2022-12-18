@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './AddUserForm.module.css';
-import Button from "./UI/Button";
+import Button from "../UI/Button";
 const addUserForm = (props) => {
     return <form>
         <div className={styles.newUser__controls}>
