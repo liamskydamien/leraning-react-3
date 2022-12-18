@@ -1,0 +1,22 @@
+.user__name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.user__age{
+    font-size: 1.25rem;
+    color: #000;
+}
+
+.user{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: #cccccc;
+    height: 3rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
