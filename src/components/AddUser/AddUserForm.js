@@ -17,17 +17,17 @@ const AddUserForm = (props) => {
             name: enteredName,
             age: enteredAge
         }
-        props.onAddUser(user);
+        props.addUser(user);
         setEnteredName('');
         setEnteredAge('');
     }
 
     const nameChangeHandler = (name) => {
-        setEnteredName(name);
+        setEnteredName(name.target.value);
     }
 
     const ageChangeHandler = (age) => {
-        setEnteredAge(age);
+        setEnteredAge(age.target.value);
     }
 
     return <form onSubmit={addUserHandler}>
