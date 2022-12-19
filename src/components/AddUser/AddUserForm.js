@@ -1,7 +1,11 @@
-import React from "react";
+import React , { useState } from "react";
 import styles from './AddUserForm.module.css';
 import Button from "../UI/Button";
-const addUserForm = (props) => {
+const AddUserForm = (props) => {
+
+    const [enteredName, setEnteredName] = useState('');
+    const [enteredAge, setEnteredAge] = useState('');
+
 
     const cancelHandler = (event) => {
         console.log("Cancel button clicked");
@@ -9,18 +13,32 @@ const addUserForm = (props) => {
 
     const addUserHandler = (event) => {
         event.preventDefault();
-        console.log("Add User button clicked");
+        const user = {
+            name: enteredName,
+            age: enteredAge
+        }
+        props.onAddUser(user);
+        setEnteredName('');
+        setEnteredAge('');
+    }
+
+    const nameChangeHandler = (name) => {
+        setEnteredName(name);
+    }
+
+    const ageChangeHandler = (age) => {
+        setEnteredAge(age);
     }
 
     return <form onSubmit={addUserHandler}>
         <div className={styles.newUser__controls}>
             <div>
                 <label className={styles.newUser__control__label} htmlFor="username">Username</label>
-                <input className={styles.newUser__control__input} id="username" type="text"/>
+                <input className={styles.newUser__control__input} id="username" type="text" value={enteredName} onChange={nameChangeHandler}/>
             </div>
             <div>
                 <label className={styles.newUser__control__label} htmlFor="age">Age (Years)</label>
-                <input className={styles.newUser__control__input} id="age" type="number"/>
+                <input className={styles.newUser__control__input} id="age" type="number" value={enteredAge} onChange={ageChangeHandler}/>
             </div>
         </div>
         <div className={styles.newUser__actions}>
@@ -29,4 +47,4 @@ const addUserForm = (props) => {
         </div>
     </form>
 }
-export default addUserForm;
+export default AddUserForm;

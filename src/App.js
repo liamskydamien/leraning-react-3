@@ -4,9 +4,12 @@ import UserList from "./components/DisplayUser/UserList";
 
 function App() {
     const users = [{"id": 1, "name": "John", "age": 28}, {"id": 2, "name": "Jane", "age": 29}];
+    const addUserHandler = (user) => {
+        console.log(user);
+    }
   return (
     <div className="App">
-      <AddUser></AddUser>
+      <AddUser addUser={addUserHandler}></AddUser>
       <UserList users={users}></UserList>
     </div>
   );
