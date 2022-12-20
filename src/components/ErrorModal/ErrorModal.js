@@ -5,7 +5,7 @@ const ErrorModal = (props) => {
     const onClickHandler = () => {
         props.onClose();
     }
-    return  <div className={styles.backdrop}>
+    return  <div className={styles.backdrop} onClick={onClickHandler}>
                 <Card className={styles.modal}>
                     <header className={styles.header}>
                         <h2>{props.name}</h2>
