@@ -15,7 +15,7 @@ const AddUserForm = (props) => {
     const addUserHandler = (event) => {
         event.preventDefault();
         if (event.target.name.value === '' || event.target.age.value === '') {
-            return;
+            props.error({name: 'Error', message: 'Please enter a name and age'});
         }
         else {
             const user = {
