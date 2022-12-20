@@ -29,7 +29,7 @@ const AddUserForm = (props) => {
     }
 
     const nameChangeHandler = (name) => {
-        setEnteredName(name.target.value);
+            setEnteredName(name.target.value);
     }
 
     const ageChangeHandler = (age) => {
@@ -44,7 +44,7 @@ const AddUserForm = (props) => {
             </div>
             <div>
                 <label className={styles.newUser__control__label} htmlFor="age">Age (Years)</label>
-                <input className={styles.newUser__control__input} id="age" type="number" value={enteredAge} onChange={ageChangeHandler}/>
+                <input className={styles.newUser__control__input} id="age" min={0} type="number" value={enteredAge} onChange={ageChangeHandler}/>
             </div>
         </div>
         <div className={styles.newUser__actions}>
