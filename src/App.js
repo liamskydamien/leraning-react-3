@@ -4,16 +4,10 @@ import AddUser from "./components/AddUser/AddUser";
 import UserList from "./components/DisplayUser/UserList";
 
 function App() {
-    let id = 0;
-    const incrementCounter = () => {
-        return id++;
-    }
-
-    const [users, setUsers] = useState([{"id": incrementCounter(), "name": "John", "age": 28}, {"id": incrementCounter(), "name": "Jane", "age": 29}]);
-
+    const [users, setUsers] = useState([{"id": "John" + Math.random()*100, "name": "John", "age": 28}, {"id": "Jane" + Math.random()*100, "name": "Jane", "age": 29}]);
 
     const addUserHandler = (user) => {
-        const newUsers = [...users, {"id": incrementCounter(), "name": user.name, "age": user.age}];
+        const newUsers = [...users, {"id": user.name + Math.random()*100, "name": user.name, "age": user.age}];
         setUsers(newUsers);
     }
   return (
