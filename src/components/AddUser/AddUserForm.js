@@ -7,19 +7,25 @@ const AddUserForm = (props) => {
     const [enteredAge, setEnteredAge] = useState('');
 
 
-    const cancelHandler = (event) => {
-        console.log("Cancel button clicked");
+    const cancelHandler = () => {
+        setEnteredName('');
+        setEnteredAge('');
     }
 
     const addUserHandler = (event) => {
         event.preventDefault();
-        const user = {
-            name: enteredName,
-            age: enteredAge
+        if (event.target.name.value === '' || event.target.age.value === '') {
+            return;
         }
-        props.addUser(user);
-        setEnteredName('');
-        setEnteredAge('');
+        else {
+            const user = {
+                name: enteredName,
+                age: enteredAge
+            }
+            props.addUser(user);
+            setEnteredName('');
+            setEnteredAge('');
+        }
     }
 
     const nameChangeHandler = (name) => {
