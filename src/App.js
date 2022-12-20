@@ -2,7 +2,6 @@ import './App.css';
 import React, { useState } from 'react';
 import AddUser from "./components/AddUser/AddUser";
 import UserList from "./components/DisplayUser/UserList";
-import ErrorModal from "./components/ErrorModal/ErrorModal";
 
 function App() {
     const [users, setUsers] = useState([{"id": "John" + Math.random()*100, "name": "John", "age": 28}, {"id": "Jane" + Math.random()*100, "name": "Jane", "age": 29}]);
@@ -15,7 +14,6 @@ function App() {
     <div className="App">
       <AddUser addUser={addUserHandler}></AddUser>
       <UserList users={users}></UserList>
-      <ErrorModal name="Test" message="This is a test"></ErrorModal>
     </div>
   );
 }
