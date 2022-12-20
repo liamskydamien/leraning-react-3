@@ -5,7 +5,10 @@ const Button = props => {
         props.onClick();
     }
     const buttonClass = styles.button + ' ' + styles[props.className];
-    return <button className={buttonClass} type={props.type} onClick={props.onClick !== '' ? onClickHandler : null}>
-{props.children}</button>
+    return  <button className={buttonClass}
+                    type={props.type}
+                    onClick={props.onClick !== '' ? onClickHandler : null}>
+                            {props.children}
+            </button>
 }
 export default Button;
