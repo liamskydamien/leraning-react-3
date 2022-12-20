@@ -13,7 +13,7 @@ function App() {
 
 
     const addUserHandler = (user) => {
-        const newUsers = [...users, user];
+        const newUsers = [...users, {"id": incrementCounter(), "name": user.name, "age": user.age}];
         setUsers(newUsers);
     }
   return (
