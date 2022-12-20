@@ -1,11 +1,20 @@
 import './App.css';
+import React, { useState } from 'react';
 import AddUser from "./components/AddUser/AddUser";
 import UserList from "./components/DisplayUser/UserList";
 
 function App() {
-    const users = [{"id": 1, "name": "John", "age": 28}, {"id": 2, "name": "Jane", "age": 29}];
+    let id = 0;
+    const incrementCounter = () => {
+        return id++;
+    }
+
+    const [users, setUsers] = useState([{"id": incrementCounter(), "name": "John", "age": 28}, {"id": incrementCounter(), "name": "Jane", "age": 29}]);
+
+
     const addUserHandler = (user) => {
-        console.log(user);
+        const newUsers = [...users, user];
+        setUsers(newUsers);
     }
   return (
     <div className="App">
