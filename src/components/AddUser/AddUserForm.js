@@ -17,6 +17,9 @@ const AddUserForm = (props) => {
         if (event.target.name.value === '' || event.target.age.value === '') {
             props.error({name: 'Error', message: 'Please enter a name and age'});
         }
+        else if (event.target.age.value < 1) {
+            props.error({name: 'Error', message: 'Please enter a valid age'});
+        }
         else {
             const user = {
                 name: enteredName,
@@ -44,7 +47,7 @@ const AddUserForm = (props) => {
             </div>
             <div>
                 <label className={styles.newUser__control__label} htmlFor="age">Age (Years)</label>
-                <input className={styles.newUser__control__input} id="age" min={0} type="number" value={enteredAge} onChange={ageChangeHandler}/>
+                <input className={styles.newUser__control__input} id="age" type="number" value={enteredAge} onChange={ageChangeHandler}/>
             </div>
         </div>
         <div className={styles.newUser__actions}>
