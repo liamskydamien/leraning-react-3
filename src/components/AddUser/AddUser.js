@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Card from "../UI/Card";
 import AddUserForm from "./AddUserForm";
 import ErrorModal from "../ErrorModal/ErrorModal";
+import Wrapper from "../Helpers/Wrapper";
 
 const AddUser = (props) => {
     const addUserHandler = (user) => {
@@ -19,11 +20,11 @@ const AddUser = (props) => {
         setError(false);
     }
 
-    return <div>
+    return <Wrapper>
         {error ? <ErrorModal name={errorName} message={errorMessage} onClose={closeErrorHandler}></ErrorModal> : null}
         <Card>
             <AddUserForm addUser={addUserHandler} error={errorHandler}></AddUserForm>
         </Card>
-        </div>
+        </Wrapper>
 }
 export default AddUser;
