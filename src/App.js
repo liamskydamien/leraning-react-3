@@ -11,10 +11,10 @@ function App() {
         setUsers(newUsers);
     }
   return (
-    <div className="App">
+    <React.Fragment>
       <AddUser addUser={addUserHandler}></AddUser>
       <UserList users={users}></UserList>
-    </div>
+    </React.Fragment>
   );
 }
 
